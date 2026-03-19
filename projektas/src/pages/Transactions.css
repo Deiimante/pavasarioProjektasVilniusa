@@ -1,0 +1,123 @@
+.transactions-container {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+/* HEADER */
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transactions-header h1 {
+  margin: 0;
+}
+
+.transactions-header p {
+  color: gray;
+}
+
+.add-btn {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* FILTERS */
+.filters {
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.search {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  border: 1px solid #ddd;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filter-buttons .clear {
+  margin-left: auto;
+  color: #4f46e5;
+}
+
+/* TABLE */
+.table {
+  margin-top: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  padding: 12px 15px;
+  align-items: center;
+}
+
+.table-header {
+  background: #f9fafb;
+  font-weight: bold;
+  color: gray;
+}
+
+.table-row {
+  border-top: 1px solid #eee;
+}
+
+.table-row:hover {
+  background: #f5f7fb;
+}
+
+/* AMOUNT COLORS */
+.income {
+  color: green;
+  font-weight: 600;
+}
+
+.expense {
+  color: red;
+  font-weight: 600;
+}
+
+/* STATUS */
+.status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  width: fit-content;
+}
+
+.done {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
