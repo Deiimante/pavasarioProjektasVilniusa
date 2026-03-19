@@ -1,86 +1,64 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import "./dashboard.css";
 
 export default function Dashboard() {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    // Optional: clear any login state here
-    navigate("/login");
-  };
-
   return (
-    <div className="container-fluid vh-100 bg-light">
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div className="container-fluid">
-          <span className="navbar-brand">Wealthwise Dashboard</span>
-          <button className="btn btn-outline-light" onClick={handleLogout}>
-            Logout
-          </button>
-        </div>
-      </nav>
+    <div className="container">
 
-      {/* Main Content */}
-      <div className="row mt-5">
-        <div className="col-md-3">
-          {/* Sidebar */}
-          <div className="list-group">
-            <a href="#" className="list-group-item list-group-item-action active">
-              Overview
-            </a>
-            <a href="#" className="list-group-item list-group-item-action">
-              Analytics
-            </a>
-            <a href="#" className="list-group-item list-group-item-action">
-              Profile
-            </a>
-            <a href="#" className="list-group-item list-group-item-action">
-              Settings
-            </a>
-          </div>
-        </div>
+      {/* Sidebar */}
+      <aside className="sidebar">
+        <h2>WealthWise</h2>
+        <ul>
+          <li className="active">Dashboard</li>
+          <li>Budgets</li>
+          <li>Transactions</li>
+          <li>Reports</li>
+          <li>Settings</li>
+        </ul>
+      </aside>
 
-        <div className="col-md-9">
-          {/* Dashboard Cards */}
-          <div className="row">
-            <div className="col-md-4 mb-4">
-              <div className="card text-center shadow-sm">
-                <div className="card-body">
-                  <h5 className="card-title">Revenue</h5>
-                  <p className="card-text display-6">$12,345</p>
-                </div>
-              </div>
-            </div>
+      {/* Main */}
+      <main className="main">
 
-            <div className="col-md-4 mb-4">
-              <div className="card text-center shadow-sm">
-                <div className="card-body">
-                  <h5 className="card-title">Users</h5>
-                  <p className="card-text display-6">1,234</p>
-                </div>
-              </div>
-            </div>
+        <header>
+          <h1>Financial Overview</h1>
+          <button>+ New</button>
+        </header>
 
-            <div className="col-md-4 mb-4">
-              <div className="card text-center shadow-sm">
-                <div className="card-body">
-                  <h5 className="card-title">Orders</h5>
-                  <p className="card-text display-6">567</p>
-                </div>
-              </div>
-            </div>
+        <section className="cards">
+          <div className="card primary">
+            <p>Total Balance</p>
+            <h2>$12,450</h2>
           </div>
 
-          {/* Additional Section */}
-          <div className="mt-4 p-3 bg-white rounded shadow-sm">
-            <h4>Welcome to your Dashboard!</h4>
-            <p>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem harum corrupti, beatae deleniti odio fugit.
-            </p>
+          <div className="card">
+            <p>Income</p>
+            <h2>$5,200</h2>
           </div>
-        </div>
-      </div>
+
+          <div className="card">
+            <p>Expenses</p>
+            <h2>$3,120</h2>
+          </div>
+        </section>
+
+        <section className="bottom">
+          <div className="chart">
+            <h3>Spending Analysis</h3>
+            <div className="fake-chart">Chart here</div>
+          </div>
+
+          <div className="activity">
+            <h3>Recent Activity</h3>
+            <ul>
+              <li>Apple Store - $199</li>
+              <li>Coffee - $12</li>
+              <li>Salary +$4200</li>
+              <li>Gas - $45</li>
+            </ul>
+          </div>
+        </section>
+
+      </main>
     </div>
   );
 }
