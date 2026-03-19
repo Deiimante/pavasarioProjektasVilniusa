@@ -1,80 +1,16 @@
-/* Wrapper */
-.home-wrapper {
-  width: 100%;
-  background: #f8f9fc;
-}
-
-/* LEFT SIDE — FULL BLUE */
-.home-left {
-  flex: 1;
-  background: var(--ww-primary);
-}
-
-/* RIGHT SIDE — WHITE PANEL */
-.home-right {
-  width: 480px;
-  background: white;
-  border-left: 1px solid #e5e7eb;
-}
-
-/* Title */
-.home-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-/* Subtitle */
-.home-subtitle {
-  font-size: 1.1rem;
-  color: var(--ww-gray);
-  max-width: 360px;
-  line-height: 1.6;
-}
-
-/* Links styled like your login/register page */
-.home-link {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--ww-primary);
-  text-decoration: none;
-  padding: 8px 0;
-  transition: 0.2s ease;
-}
-
-.home-link:hover {
-  transform: translateX(4px);
-  color: var(--ww-primary-light);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .home-wrapper {
-    flex-direction: column;
-  }
-
-  .home-right {
-    width: 100%;
-    border-left: none;
-    border-top: 1px solid #e5e7eb;
-  }
-}
-
-
-/* BUTTONS — clean, modern, and consistent with login/register */
+/* BUTTONS — same style as login page, but centered */
 .home-button {
   display: inline-block;
-  width: 100%;
-  max-width: 220px;
-  text-align: center;
+  max-width: 260px;
   padding: 12px 0;
   border-radius: 10px;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
+  text-align: center;
   transition: 0.25s ease;
 }
 
-/* Primary (Login) */
+/* Primary button */
 .home-button-primary {
   background: var(--ww-primary);
   color: white;
@@ -86,7 +22,7 @@
   transform: translateY(-2px);
 }
 
-/* Secondary (Sign Up) */
+/* Outline button */
 .home-button-outline {
   border: 2px solid var(--ww-primary);
   color: var(--ww-primary);
