@@ -34,3 +34,10 @@
   color: white;
   transform: translateY(-2px);
 }
+
+.home-button {
+  text-decoration: none !important;
+}
+.home-button:hover {
+  text-decoration: none !important;
+}

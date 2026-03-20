@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
@@ -8,18 +7,19 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Transactions from "./pages/Transactions";
 
-
 export default function App() {
   return (
     <Router>
       <Routes>
+        {/* Public pages */}
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
 
-        {/* Dashboard  */}
+        {/* App pages */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/transactions" element={<Transactions />} />
+        
       </Routes>
     </Router>
   );
