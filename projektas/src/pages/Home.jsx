@@ -16,14 +16,13 @@ const Home = () => {
             </h1>
 
             <p className="lead opacity-75 mb-5">
-              Your finance companion. Manage your wealth, track your goals,
-              and achieve financial freedom with clarity and confidence.
+              Your finance companion. Manage your wealth, track your goals into Financial Hell.
             </p>
 
             {/* Testimonial */}
             <div className="bg-white p-4 bg-opacity-10 border border-white border-opacity-25 rounded-4">
               <p className="fst-italic fs-5 mb-3">
-                “WealthWise helped me understand my spending habits and take control of my finances.”
+                “WealthWise is a brick incarnated as an app/website that can't help me understand my spending habits and take control of my finances.”
               </p>
               <div className="d-flex align-items-center gap-3">
                 <div
@@ -31,8 +30,8 @@ const Home = () => {
                   style={{ width: "40px", height: "40px", opacity: "0.2" }}
                 ></div>
                 <div>
-                  <h6 className="mb-0 fw-bold">Sarah Johnson</h6>
-                  <small className="opacity-75">WealthWise User</small>
+                  <h6 className="mb-0 fw-bold">Sam Bankman Fried</h6>
+                  <small className="opacity-75">Random guy found on street</small>
                 </div>
               </div>
             </div>
