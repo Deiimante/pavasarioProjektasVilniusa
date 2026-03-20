@@ -5,6 +5,43 @@ const Login_page = () => { //{ setCurrentUser }
   const [password, setPassword] = useState("");
 
 
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const emailSubmit = email.trim().toLowerCase();
+    const passwordSubmit = password.trim();
+
+    fetch("http://localhost:8000/users/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: emailSubmit,
+        password: passwordSubmit,
+      }),
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(emailSubmit, '\n', passwordSubmit);
+        console.log(data);
+
+        // localStorage.setItem("token", JSON.stringify(data));
+        // setCurrentUser(data);
+
+        setEmail("");
+        setPassword("");
+      })
+      .catch((err) => console.error(err));
+
+    setEmail("");
+    setPassword("");
+    
+  };
+
+
+
   return (
     <>
         <div className="container-fluid p-0">
@@ -75,7 +112,7 @@ const Login_page = () => { //{ setCurrentUser }
                                 <hr className="flex-grow-1 text-muted opacity-25" />
                             </div>
 
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <div className="mb-3">
                                     <label className="form-label d-flex justify-content-start small fw-bold text-uppercase text-muted">Email address</label>
                                     <input type="email" className="form-control form-control-lg bg-light border-0 fs-6" placeholder="name@company.com" required value={email} onChange={(e) => setEmail(e.target.value)} />
